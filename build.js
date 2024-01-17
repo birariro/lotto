@@ -18,16 +18,12 @@ function numberToColor(number) {
 
 function getLastNumber(){
  
-  // start lotto round date
   const startDate = new Date('2002-12-07'); 
-
   const currentDate = new Date();
 
-  // 두 날짜의 차이를 계산
+  //날짜 차이가 로또 회차
   const oneDay = 24 * 60 * 60 * 1000;
   const diffDays = Math.round(Math.abs((startDate - currentDate) / oneDay));
-
-  // 날짜 차이를 주차로 변환
   const lastNumber = (Math.floor(diffDays / 7) +1);
 
   console.log("last lotto round : ", lastNumber);
