@@ -1,0 +1,33 @@
+name: get week lucky number
+
+on:
+  schedule: 
+    - cron: "0 10 * * 0" #매주 일요일 오전 10시
+
+  workflow_dispatch:
+
+jobs:
+  build-svg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - run: npm install
+
+      - name: run js
+        run: node build.js
+
+      - name: svg commit
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: birariro
+          author_email: vps32@naver.com
+          message: "week lucky numbers"
+          add: "*.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
