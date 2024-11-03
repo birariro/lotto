@@ -18,23 +18,23 @@
     </style>
 
 
-    <circle cx="30" cy="30" r="20" fill="#A5BCEF" class="grow" style="--delay: 0; opacity: 0"/>
-    <text x="30" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 0.7; opacity: 0">10</text>
+    <circle cx="30" cy="30" r="20" fill="#F8B909" class="grow" style="--delay: 0; opacity: 0"/>
+    <text x="30" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 0.7; opacity: 0">3</text>
 
-    <circle cx="80" cy="30" r="20" fill="#A5BCEF" class="grow" style="--delay: 1; opacity: 0"/>
-    <text x="80" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 1.6; opacity: 0">16</text>
+    <circle cx="80" cy="30" r="20" fill="#F8B909" class="grow" style="--delay: 1; opacity: 0"/>
+    <text x="80" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 1.6; opacity: 0">4</text>
 
     <circle cx="130" cy="30" r="20" fill="#A5BCEF" class="grow" style="--delay: 2; opacity: 0"/>
-    <text x="130" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 2.5; opacity: 0">17</text>
+    <text x="130" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 2.5; opacity: 0">12</text>
 
-    <circle cx="180" cy="30" r="20" fill="#FD595F" class="grow" style="--delay: 3; opacity: 0"/>
-    <text x="180" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 3.4; opacity: 0">27</text>
+    <circle cx="180" cy="30" r="20" fill="#A5BCEF" class="grow" style="--delay: 3; opacity: 0"/>
+    <text x="180" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 3.4; opacity: 0">15</text>
 
     <circle cx="230" cy="30" r="20" fill="#FD595F" class="grow" style="--delay: 4; opacity: 0"/>
-    <text x="230" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 4.3; opacity: 0">28</text>
+    <text x="230" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 4.3; opacity: 0">26</text>
 
     <circle cx="280" cy="30" r="20" fill="#9A9A9A" class="grow" style="--delay: 5; opacity: 0"/>
-    <text x="280" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 5.2; opacity: 0">36</text>
+    <text x="280" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 5.2; opacity: 0">34</text>
 
     <circle cx="370" cy="30" r="20" fill="#F8B909" class="grow" style="--delay: 10; opacity: 0"/>
     <text x="370" y="30" text-anchor="middle" fill="white" font-size="12" dy=".3em" class="grow" style="--delay: 10.1; opacity: 0">6</text>
