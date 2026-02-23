@@ -10,41 +10,23 @@ function numberToColor(number) {
       return '#FD595F';
   } else if (number >= 30 && number <= 39) {
       return '#9A9A9A';
-  } else if (number >= 40 && number <= 45) {
-      return '#A2D432';
   }
-  return '#F8B909';
+  return '#A2D432';
 }
 
-function getLastNumber(){
- 
-  const startDate = new Date('2002-12-07'); 
-  const currentDate = new Date();
-
-  //날짜 차이가 로또 회차
-  const oneDay = 24 * 60 * 60 * 1000;
-  const diffDays = Math.round(Math.abs((startDate - currentDate) / oneDay));
-  const lastNumber = (Math.floor(diffDays / 7) +1);
-
-  console.log("last lotto round : ", lastNumber);
-
-  return lastNumber;
-}
-
-
-const last = getLastNumber();
-const path = `https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${last}`;
+const path = `https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do`;
 
 got.get(path).then(async ok => {
   const response = JSON.parse(ok.body);
+  const lottoData = response['data']['list'][0];
 
-  const number1 = response['drwtNo1'];
-  const number2 = response['drwtNo2'];
-  const number3 = response['drwtNo3'];
-  const number4 = response['drwtNo4'];
-  const number5 = response['drwtNo5'];
-  const number6 = response['drwtNo6'];
-  const number7 = response['bnusNo'];
+  const number1 = lottoData['tm1WnNo'];
+  const number2 = lottoData['tm2WnNo'];
+  const number3 = lottoData['tm3WnNo'];
+  const number4 = lottoData['tm4WnNo'];
+  const number5 = lottoData['tm5WnNo'];
+  const number6 = lottoData['tm6WnNo'];
+  const number7 = lottoData['bnsWnNo'];
 
   const color1 = numberToColor(number1);
   const color2 = numberToColor(number2);
@@ -82,7 +64,7 @@ got.get(path).then(async ok => {
     data = data.replace('{color7}', color7)
     data = data.replace('{number7}', number7)
 
-    data = fs.writeFile('luck.svg', data, (err) => {
+    fs.writeFile('luck.svg', data, (err) => {
       if (err) {
         console.error(err)
         return
@@ -90,6 +72,3 @@ got.get(path).then(async ok => {
     })
   })
 })
-
-
-
